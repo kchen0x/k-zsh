@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/kunch/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,7 +53,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(mvn git extract sublime z d sudo)
+plugins=(mvn git extract z d sudo brew brew-cast iwhois rsync zsh_reload zsh-syntax-highlighting osx)
 
 # User configuration
 
@@ -85,6 +85,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 alias -s html='vim'
 alias -s rb='vim'
 alias -s py='vim'
@@ -97,13 +98,10 @@ alias py='python'
 alias py3='python3'
 alias ip='ifconfig | grep inet'
 alias vi= vim
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # configurations
 # export JAVA_HOME=/usr/bin/java
 # export PATH=PATH;JAVA_HOME/bin
-export DEFAULT_USER=kunch
-source /Users/kunch/Project/kafka-plugins/env.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -113,4 +111,6 @@ if [ -f ~/.bashhub/bashhub.zsh ]; then
 fi
 
 ### Using Gruvbox for vim with 256 color pallete
-source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+if [ -f $HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh ]; then
+    source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+fi
