@@ -96,7 +96,7 @@ alias -s java='vim'
 alias -s txt='vim'
 alias py='python'
 alias py3='python3'
-alias ip='ifconfig | grep inet'
+alias myip='ifconfig | grep inet'
 alias vi= vim
 
 # configurations
