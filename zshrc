@@ -6,9 +6,6 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-# ZSH_THEME="agnoster"
-# ZSH_THEME="amuse"
-# ZSH_THEME="ys"
 ZSH_THEME="bira"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -61,6 +58,7 @@ plugins=(mvn git extract z d sudo brew brew-cast iwhois rsync zsh_reload zsh-syn
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source ~/.bashrc
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
