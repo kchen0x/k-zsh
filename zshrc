@@ -100,6 +100,8 @@ alias vi= vim
 # configurations
 # export JAVA_HOME=/usr/bin/java
 # export PATH=PATH;JAVA_HOME/bin
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
