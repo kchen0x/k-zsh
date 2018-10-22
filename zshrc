@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(mvn git extract z d sudo brew brew-cast iwhois rsync zsh_reload zsh-syntax-highlighting osx)
+plugins=(colored-man-pages extract z d sudo zsh_reload osx zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -58,7 +58,6 @@ plugins=(mvn git extract z d sudo brew brew-cast iwhois rsync zsh_reload zsh-syn
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-source ~/.bashrc
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -81,36 +80,15 @@ source ~/.bashrc
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias -s html='vim'
-alias -s rb='vim'
-alias -s py='vim'
-alias -s scala='vim'
-alias -s js='vim'
-alias -s c='vim'
-alias -s java='vim'
-alias -s txt='vim'
-alias py='python'
-alias py3='python3'
-alias myip='ifconfig | grep inet'
-alias vi= vim
+# Source personal configuration from my dotfiles
+for DOTFILE in `find $HOME/.dotfiles/shellrc`; do
+    if [ -f $DOTFILE ]; then
+        source $DOTFILE
+    fi
+done
 
 # configurations
 # export JAVA_HOME=/usr/bin/java
 # export PATH=PATH;JAVA_HOME/bin
-export LC_ALL=en_US.UTF-8  
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-### Bashhub.com Installation
-if [ -f ~/.bashhub/bashhub.zsh ]; then
-    source ~/.bashhub/bashhub.zsh
-fi
-
-### Using Gruvbox for vim with 256 color pallete
-if [ -f $HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh ]; then
-    source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
-fi
