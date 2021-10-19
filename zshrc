@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="bira"
+ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages extract z sudo zsh_reload osx zsh-syntax-highlighting)
+plugins=(git colored-man-pages extract z sudo osx zsh-syntax-highlighting)
 
 # User configuration
 
@@ -92,3 +92,6 @@ done
 # export PATH=PATH;JAVA_HOME/bin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export ANDROID_HOME=/Users/kchen/Library/Android/sdk
+export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home
+export PATH=$PATH:~/.cargo/bin
