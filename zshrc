@@ -92,6 +92,3 @@ done
 # export PATH=PATH;JAVA_HOME/bin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export ANDROID_HOME=/Users/kchen/Library/Android/sdk
-export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home
-export PATH=$PATH:~/.cargo/bin
